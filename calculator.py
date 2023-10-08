@@ -55,6 +55,9 @@ class ScientificCalculator:
     def get_operator(self):
         return input("Enter operator (add, sub, mul, div, sqrt, sin, cos, tan, asin, acos, atan, exp, log, pow): ")
 
+    def gcd(self, a, b):
+        return math.gcd(a, b)
+
     def calculate(self):
         operator = self.get_operator()
 
@@ -76,6 +79,9 @@ class ScientificCalculator:
                 print(self.atan(a))
             elif operator == 'exp':
                 print(self.exponent(a))
+            elif operator == 'gcd':
+            a, b = self.get_numbers()
+            print(self.gcd(a, b))
         else:
             a, b = self.get_numbers()
             if operator == 'add':
